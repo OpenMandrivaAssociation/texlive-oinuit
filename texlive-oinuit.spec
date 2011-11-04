@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /language/inuktitut/oinuit
+# catalog-date 2007-02-23 22:01:12 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-oinuit
 Version:	20070223
 Release:	1
@@ -68,6 +74,7 @@ fonts.
 %doc %{_texmfdistdir}/source/lambda/oinuit/oinuit.dtx
 %doc %{_texmfdistdir}/source/lambda/oinuit/oinuit.ins
 %doc %{_texmfdistdir}/source/lambda/oinuit/oinuit.sty
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -78,3 +85,5 @@ fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts omega tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
