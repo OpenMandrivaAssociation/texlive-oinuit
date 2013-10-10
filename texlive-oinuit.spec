@@ -1,12 +1,12 @@
-# revision 15878
+# revision 28668
 # category Package
 # catalog-ctan /language/inuktitut/oinuit
-# catalog-date 2007-02-23 22:01:12 +0100
+# catalog-date 2012-06-16 10:52:26 +0200
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-oinuit
-Version:	20070223
-Release:	2
+Version:	20120616
+Release:	1
 Summary:	LaTeX Support for the Inuktitut Language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/inuktitut/oinuit
@@ -20,10 +20,9 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-The oinuit system is a set of Lambda (Omega LaTeX) typesetting
-tools for the Inuktitut language. The oinuit package supports
-five different input methods and is bundled with the necessary
-fonts.
+The package provides a set of Lambda (Omega LaTeX) typesetting
+tools for the Inuktitut language. Five different input methods
+are supported and with the necessary fonts are also provided.
 
 %post
     %{_sbindir}/texlive.post
@@ -56,14 +55,21 @@ fonts.
 %{_texmfdistdir}/omega/ocp/oinuit/Ninuit2uni.ocp
 %{_texmfdistdir}/omega/ocp/oinuit/Qinuit2uni.ocp
 %{_texmfdistdir}/omega/ocp/oinuit/inuitscii.ocp
+%{_texmfdistdir}/omega/otp/oinuit/Ninuit2uni.otp
+%{_texmfdistdir}/omega/otp/oinuit/Qinuit2uni.otp
+%{_texmfdistdir}/omega/otp/oinuit/inuitscii.otp
+%{_texmfdistdir}/tex/lambda/oinuit/litcmr.fd
+%{_texmfdistdir}/tex/lambda/oinuit/litenc.def
 %{_texmfdistdir}/tex/lambda/oinuit/oinuit.sty
 %doc %{_texmfdistdir}/doc/fonts/oinuit/README.1ST
-%doc %{_texmfdistdir}/doc/fonts/oinuit/examples/book.tex
-%doc %{_texmfdistdir}/doc/fonts/oinuit/examples/taqtu.tex
+%doc %{_texmfdistdir}/doc/fonts/oinuit/README.TEXLIVE
+%doc %{_texmfdistdir}/doc/fonts/oinuit/Table.eps
+%doc %{_texmfdistdir}/doc/fonts/oinuit/book.tex
+%doc %{_texmfdistdir}/doc/fonts/oinuit/inuit.tex
+%doc %{_texmfdistdir}/doc/fonts/oinuit/taqtu.tex
 #- source
 %doc %{_texmfdistdir}/source/lambda/oinuit/oinuit.dtx
 %doc %{_texmfdistdir}/source/lambda/oinuit/oinuit.ins
-%doc %{_texmfdistdir}/source/lambda/oinuit/oinuit.sty
 
 #-----------------------------------------------------------------------
 %prep
@@ -74,17 +80,3 @@ fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts omega tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070223-2
-+ Revision: 754506
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070223-1
-+ Revision: 719156
-- texlive-oinuit
-- texlive-oinuit
-- texlive-oinuit
-- texlive-oinuit
-
