@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-oinuit
 Version:	20121231
-Release:	3
+Release:	4
 Summary:	LaTeX Support for the Inuktitut Language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/inuktitut/oinuit
