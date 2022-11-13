@@ -1,19 +1,13 @@
-# revision 28668
-# category Package
-# catalog-ctan /language/inuktitut/oinuit
-# catalog-date 2012-12-31 10:40:46 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-oinuit
-Version:	20190228
+Version:	28668
 Release:	1
 Summary:	LaTeX Support for the Inuktitut Language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/inuktitut/oinuit
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ tools for the Inuktitut language. Five different input methods
 are supported and with the necessary fonts are also provided.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -73,7 +67,8 @@ are supported and with the necessary fonts are also provided.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
