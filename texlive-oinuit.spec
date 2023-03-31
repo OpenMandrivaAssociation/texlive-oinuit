@@ -1,6 +1,6 @@
 Name:		texlive-oinuit
 Version:	28668
-Release:	1
+Release:	2
 Summary:	LaTeX Support for the Inuktitut Language
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/inuktitut/oinuit
