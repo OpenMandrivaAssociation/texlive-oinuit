@@ -3,7 +3,7 @@ Version:	28668
 Release:	2
 Summary:	LaTeX Support for the Inuktitut Language
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/inuktitut/oinuit
+URL:		https://www.ctan.org/tex-archive/language/inuktitut/oinuit
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oinuit.doc.r%{version}.tar.xz
